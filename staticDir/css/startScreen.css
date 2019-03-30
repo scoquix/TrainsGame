@@ -1,0 +1,12 @@
+#startScreen .room {
+    margin-top: 100px;
+    color: yellow;
+}
+
+#startScreen .room span {
+    margin: 0 10px;
+}
+
+#startScreen .room .enter {
+    cursor: pointer;
+}

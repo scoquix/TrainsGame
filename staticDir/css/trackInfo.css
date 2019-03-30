@@ -1,0 +1,12 @@
+#trackInfo {
+    background: red;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 10px;
+}
+
+#trackInfo #buildTrack {
+    cursor: pointer;
+}

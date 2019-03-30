@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Pociągi</title>
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/startScreen.css" rel="stylesheet" />
+    <link href="css/loadingScreen.css" rel="stylesheet" />
+    <link href="css/menuScreen.css" rel="stylesheet" />
+    <link href="css/trackInfo.css" rel="stylesheet" />
+    
+    <script src="libs/three.js"></script>
+    <script src="libs/socket.io.js"></script>
+    <script src="libs/ColladaLoader.js"></script>
+    <script src="libs/Stats.js"></script>
+    
+    <script src="js/core/Main.js"></script>
+    <script src="js/core/Net.js"></script>
+    <script src="js/core/Settings.js"></script>
+    <script src="js/core/Objects.js"></script>
+    <script src="js/core/Materials.js"></script>
+    
+    <script src="js/objects/TrainTrack.js"></script>
+    <script src="js/objects/Terrain.js"></script>
+    <script src="js/objects/Sun.js"></script>
+    <script src="js/objects/Sky.js"></script>
+    <script src="js/objects/Sign.js"></script>
+    <script src="js/objects/TownsTrack.js"></script>
+    <script src="js/objects/Graph.js"></script>
+    <script src="js/objects/Train.js"></script>
+    
+    <script src="js/ui/StartScreen.js"></script>
+    <script src="js/ui/LoadingScreen.js"></script>
+    <script src="js/ui/MenuScreen.js"></script>
+    <script src="js/ui/TrackInfo.js"></script>
+    <script src="js/ui/Communique.js"></script>
+    <script src="js/ui/Canvas.js"></script>
+    <script src="js/ui/Trains.js"></script>
+    <script src="js/ui/GameOver.js"></script>
+    
+    <script>
+        var main, net, client, objects;
+        window.addEventListener("load", function () {
+            client = io();
+            net = new Net();
+            objects = new Objects();
+            main = new Main();
+            canvas = new Canvas();
+        })
+    </script>
+</head>
+<body>
+    <div id="three"></div>
+    <img hidden id="black" src="gfx/cards/black-train-card.png" />
+    <img hidden id="blue" src="gfx/cards/blue-train-card.png" />
+    <img hidden id="green" src="gfx/cards/green-train-card.png" />
+    <img hidden id="orange" src="gfx/cards/orange-train-card.png" />
+    <img hidden id="red" src="gfx/cards/red-train-card.png" />
+</body>
+</html>

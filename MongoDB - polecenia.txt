@@ -1,0 +1,9 @@
+UWAGA!!! nie w shellu mongo tylko w normalnym terminalu w folderze bin
+
+// Export / Import ca³ej bazy danych
+mongodump -d <database_name> -o <directory_backup>
+mongorestore -d <database_name> <directory_backup>
+
+// Export / Import kolekcji
+mongoexport --db <database_name> --collection <collection_name> --out traffic.json
+mongoimport -c <collection_name> -d <database_name> --mode merge --file <file_name> ???

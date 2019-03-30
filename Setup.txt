@@ -1,0 +1,11 @@
+Instalacja:
+
+Nale¿y uruchomiæ serwer MongoDB i zaimportowaæ do niego bazê TrainDB
+której backup znajduje siê w folderze data->dump
+W razie problemów mo¿na utworzyæ bazê o nazwie TrainDB rêcznie
+i zaimportowaæ kolekcje data->townsColl.json oraz data->townsTracksColl.json
+
+Potem uruchamiamy serwer node.js z pliku server.js
+
+Ju¿ w przegl¹darce internetowej mo¿emy cieszyæ siê gr¹
+adres: adres_hosta:3000/

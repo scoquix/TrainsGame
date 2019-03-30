@@ -1,0 +1,53 @@
+var materials = {
+    terrainMaterial: new THREE.MeshPhongMaterial({ color: 0xffffff, map: THREE.ImageUtils.loadTexture("gfx/EuropeMap.png"), }),
+    skybox: [
+        new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/ThickCloudsWater/ThickCloudsWaterLeft2048.png') }),
+        new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/ThickCloudsWater/ThickCloudsWaterRight2048.png') }),
+        new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/ThickCloudsWater/ThickCloudsWaterUp2048.png') }),
+        new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/ThickCloudsWater/ThickCloudsWaterDown2048.png') }),
+        new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/ThickCloudsWater/ThickCloudsWaterFront2048.png') }),
+        new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/ThickCloudsWater/ThickCloudsWaterBack2048.png') }),
+    ],
+    towns: {
+        Amsterdam: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Amsterdam.png') }),
+        Athens: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Athens.png') }),
+        Berlin: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Berlin.png') }),
+        Bern: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Bern.png') }),
+        BosniaHerzegovina: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/BosniaHerzegovina.png') }),
+        Bratislava: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Bratislava.png') }),
+        Bucharest: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Bucharest.png') }),
+        Budapest: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Budapest.png') }),
+        Dublin: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Dublin.png') }),
+        Edinburgh: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Edinburgh.png') }),
+        Helsinki: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Helsinki.png') }),
+        Kiev: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Kiev.png') }),
+        Lisbon: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Lisbon.png') }),
+        London: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/London.png') }),
+        Madrid: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Madrid.png') }),
+        Minsk: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Minsk.png') }),
+        Moscow: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Moscow.png') }),
+        Oslo: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Oslo.png') }),
+        Paris: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Paris.png') }),
+        Prague: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Prague.png') }),
+        Reykjavik: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Reykjavik.png') }),
+        Rome: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Rome.png') }),
+        Sofia: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Sofia.png') }),
+        Stockholm: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Stockholm.png') }),
+        Warsaw: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Warsaw.png') }),
+        Zagreb: new THREE.MeshBasicMaterial({ side: THREE.DoubleSide, map: THREE.ImageUtils.loadTexture('../../gfx/flags/Zagreb.png') }),
+    },
+    townsTrack: new THREE.PointsMaterial({
+        color: 0x000000,
+        size: 7,
+        map: THREE.ImageUtils.loadTexture("../../gfx/particle.png"),
+        blending: THREE.AdditiveBlending,
+        transparent: true,
+        depthWrite: false,
+        opacity: 1
+    }),
+    
+    trainIcos: [
+        "gfx/train01.png", "gfx/train02.png"
+    ],
+    //signBase: new THREE.MeshPhongMaterial({ color: 0xffffff, map: THREE.ImageUtils.loadTexture("gfx/base.jpg"), combine: THREE.MixOperation, reflectivity: 5 }),
+}
