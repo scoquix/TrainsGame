@@ -1,4 +1,4 @@
-Instalacja:
+Instalacja krok po kroku:
 
 Nale¿y uruchomiæ serwer MongoDB i zaimportowaæ do niego bazê TrainDB
 której backup znajduje siê w folderze data->dump
